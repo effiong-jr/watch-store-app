@@ -1,11 +1,26 @@
+$primary-color: steelblue;
 
 #navbar {
     background-color: transparent;
     
+    #brandText {
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: $primary-color;
+    }
+
     .linksContainer {
         min-width: 40%;
         justify-content: space-evenly;
         margin-right: 30px;
+
+        a {
+            color: $primary-color;
+        }
+
+        #cartItemCount {
+            color: green;
+        }
     }
 
 }
