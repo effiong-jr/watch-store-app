@@ -1,17 +1,19 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Header';
 import LandingPage from './Landing';
+import FullWatchDetails from './Watch';
 import './App.css';
 
 const App = (props) => (
     <div className="App">
-        <Header />
-        <Container >
-            <main>
-                <LandingPage />
+        <Router>
+            <Header />
+            <main className="container">
+                <Route exact path="/" render={()=> <LandingPage />} />
+                <Route path="/watch/:name" component={FullWatchDetails} />
             </main>
-        </Container>
+        </Router>
     </div>
 );
 

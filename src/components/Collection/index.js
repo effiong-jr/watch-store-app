@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Image from 'react-bootstrap/Image';
 import './index.scss';
@@ -37,16 +38,18 @@ const DisplayWatch = (props) => {
 
     return(
         <div key={props.id} className="watchCard">
-            <div className="cardImage">
-                <Image src={props.url} alt={props.name} fluid />
-            </div>
-            <hr />
-            <div className="descriptionContainer">
-                <h5 className="watchName">{props.name}</h5>
-                <div className="watchPrice">$ {props.price.toFixed(2)}</div>
-                <div className="watchTitle">{props.title}</div>
-                <div className="briefDescription">{firstSentence(props.description)}.</div>            
-            </div>
+            <Link to={`watch/${props.name}`}>
+                <div className="cardImage">
+                    <Image src={props.url} alt={props.name} fluid />
+                </div>
+                <hr />
+                <div className="descriptionContainer">
+                    <h5 className="watchName">{props.name}</h5>
+                    <div className="watchPrice">$ {props.price.toFixed(2)}</div>
+                    <div className="watchTitle">{props.title}</div>
+                    <div className="briefDescription">{firstSentence(props.description)}.</div>            
+                </div>
+            </Link>
         </div>
     )
 };
