@@ -1,7 +1,9 @@
 $primary-color: steelblue;
 
 #navbar {
-    background-color: transparent;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
     
     #brandText {
         font-weight: 700;
@@ -19,7 +21,7 @@ $primary-color: steelblue;
         }
 
         #cartItemCount {
-            color: green;
+            color: darkslategray;
         }
     }
 

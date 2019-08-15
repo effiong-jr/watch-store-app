@@ -1,0 +1,36 @@
+.lineupContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-gap: 5px;
+    justify-items: center;
+
+    .watchCard {
+        min-width: 170px;
+        max-width: 245px;
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 2px 2px 5px gray;
+
+        .cardImage {
+            width: 110px;
+            height: 170px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .descriptionContainer {
+            padding: 10px;
+            padding-top: 0px;
+            font-size: 0.9rem;
+
+
+            .watchName {
+                font-weight: 700;
+            }
+            .watchTitle {
+                font-weight: bold;
+            }
+
+        }
+    }
+}

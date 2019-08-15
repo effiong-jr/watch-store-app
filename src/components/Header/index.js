@@ -14,7 +14,7 @@ const Header = (props) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto linksContainer">
                         <Nav.Link href="/" ><FontAwesomeIcon icon={faHome} /> Home</Nav.Link> 
-                        <Nav.Link href="/cart/"><FontAwesomeIcon icon={faShoppingCart} /> Cart <span id="cartItemCount">(0)</span></Nav.Link>
+                        <Nav.Link href="/cart/"><FontAwesomeIcon icon={faShoppingCart} /> Cart <span id="cartItemCount">[ 0 ]</span></Nav.Link>
                         <Nav.Link href="/login/"><FontAwesomeIcon icon={faSignInAlt} /> Login</Nav.Link>
                         <Nav.Link href="/sign-up/"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Nav.Link>
                     </Nav>

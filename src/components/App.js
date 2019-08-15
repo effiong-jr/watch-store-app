@@ -8,7 +8,9 @@ const App = (props) => (
     <div className="App">
         <Header />
         <Container >
-            <LandingPage />
+            <main>
+                <LandingPage />
+            </main>
         </Container>
     </div>
 );
