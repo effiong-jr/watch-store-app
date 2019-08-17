@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {Navbar, Nav, Container} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHome, faShoppingCart, faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +15,7 @@ const Header = (props) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto linksContainer">
                         <Nav.Link href="/" ><FontAwesomeIcon icon={faHome} /> Home</Nav.Link> 
-                        <Nav.Link href="/cart/"><FontAwesomeIcon icon={faShoppingCart} /> Cart <span id="cartItemCount">[ 0 ]</span></Nav.Link>
+                        <Nav.Link href="/cart/"><FontAwesomeIcon icon={faShoppingCart} /> Cart <span id="cartItemCount">[ {props.cartItemCount} ]</span></Nav.Link>
                         <Nav.Link href="/login/"><FontAwesomeIcon icon={faSignInAlt} /> Login</Nav.Link>
                         <Nav.Link href="/sign-up/"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Nav.Link>
                     </Nav>
@@ -25,4 +26,10 @@ const Header = (props) => {
     )
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        cartItemCount: (state.cart).length,
+    }
+}
+
+export default connect(mapStateToProps)(Header);

@@ -1,51 +1,89 @@
 import React from 'react';
 import {connect } from 'react-redux';
 import {Image, Button} from 'react-bootstrap';
+import {addToCart} from '../../redux/actions/actionCreators';
+import './index.scss';
 
-const FullWatchDetails = (props) => {
-    console.log(props);
-    const getWatch = props.watchDetails.filter( watch => watch.name === props.match.params.name)[0];
-    const specifications = getWatch.specification.map( spec => <li>{spec}</li> );
-    return (
-        <div>
-            <div>Description</div>
-            <div>
-                <div>
-                    <Image src={getWatch.url} />
-                </div>
-                <div>
-                    <section>
-                        <h2>{getWatch.name}</h2>
-                        <div>{getWatch.price}</div>
-                        <Button>Add To Cart</Button>
-                    </section>
-                </div>
-                <div>
-                    <h3>At A Glance</h3>
-                    <hr />
-                    <div>
-                        <h4>{getWatch.title}</h4>
-                        <p>{getWatch.description}</p>
+
+class FullWatchDetails extends React.Component {
+    state = {
+        buttonValue: "Add To Cart"
+    }
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+    addToCart = (id) => {
+        const runCheck = this.props.cartItems.filter( item => item.id === id );
+            if(runCheck.length > 0) {
+                alert("Item already in Cart!");
+                return;
+            } else {
+                this.props.addToCart(id);
+                this.setState({buttonValue: "Added to Cart"});
+            }
+    }
+
+    render() {
+        const { buttonValue } = this.state;
+        const getWatch = this.props.watchDetails.filter( watch => watch.name === this.props.match.params.name)[0];
+        const specifications = getWatch.specification.map( (spec, index) => <li key={index}>{spec}</li> );
+
+        return (
+            <div key={getWatch.id} className="fullDescriptionContainer">
+                <h3 className="heading">{getWatch.name}</h3>
+    
+                <div className=" row col-md-10 col-xs-12 offset-md-2">
+                    <div className="row col-12 image-container">
+                        <div className="col-sm-8 col-xs-12 text-center image">
+                            <Image src={getWatch.url} style={{ maxWidth: 250}} fluid/>
+                        </div>
+                        <div className="col-sm-4">
+                            <section>
+                                <h5>{getWatch.name}</h5>
+                                <div>$ {getWatch.price.toFixed(2)}</div>
+                                <Button onClick={(id)=>this.addToCart(getWatch.id)}>{buttonValue}</Button>
+                            </section>
+                        </div>
                     </div>
-
+    
                     <div>
-                        <h4>Specifications</h4>
-                        <hr />
-                        <ul>
-                            {specifications}
-                        </ul>
-                        
+                        <div className="col-md-10">
+                            <h3>At A Glance...</h3>
+                            <hr />
+                            <div>
+                                <h4>{getWatch.title}</h4>
+                                <p>{getWatch.description}</p>
+                            </div>
+    
+                            <div>
+                                <h4>Specifications</h4>
+                                <hr />
+                                <ul>
+                                    {specifications}
+                                </ul>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+        )
+    }
+} 
 
 const mapStateToProps = (state) => {
     return {
         watchDetails: state.watch,
+        cartItems : state.cart,
     }
 }
 
-export default connect(mapStateToProps)(FullWatchDetails);
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        addToCart: (id) => dispatch(addToCart(id))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchtoProps)(FullWatchDetails);

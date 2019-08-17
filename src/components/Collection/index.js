@@ -10,6 +10,7 @@ const LineUp = (props) => {
         return(
             <DisplayWatch 
                 key={id}
+                id={id}
                 url={url}
                 name={name} 
                 price={price}
@@ -35,7 +36,6 @@ const DisplayWatch = (props) => {
         const sentence = text.match(regex);
         return sentence;
     }
-
     return(
         <div key={props.id} className="watchCard">
             <Link to={`watch/${props.name}`}>
