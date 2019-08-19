@@ -8,9 +8,6 @@ import './index.scss';
 
 class Cart extends React.Component {
 
-    // componentDidMount() {
-    //     console.log(this.props.subTotal());
-    // }
 
     handleQuantityIncrease = (id, price) => {
         this.props.addOne(id, price);
@@ -99,7 +96,7 @@ const mapStateToProps = state => {
 
     const watchCollection = state.watch;
     const cart = state.cart.items;
-    const totalAmount = state.cart.total;
+    const totalAmount = state.cart.sumTotal;
     
     return {
         cartItems: watchesInCart(watchCollection, cart),
@@ -110,9 +107,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addOne: (id, price) => dispatch(increaseQuantityByOne(id, price)),
-        subtractOne: (id) => dispatch(decreaseQuantityByOne(id)),
+        subtractOne: (id, price) => dispatch(decreaseQuantityByOne(id, price)),
         deleteItem : (id) => dispatch(deleteFromCart(id)),
-        // subTotal: () => dispatch(calculateTotal())
     }
 }
 
