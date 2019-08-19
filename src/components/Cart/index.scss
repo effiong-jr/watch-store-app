@@ -1,0 +1,59 @@
+.cartContainer {
+    
+    .cartItems {
+        font-size: 13px;
+        display: grid;
+        margin: auto;
+        row-gap: 20px;
+    }
+
+    .cartItem {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-areas: "image name buttons price close";
+        box-shadow: 1px 1px 5px gray;
+        border-radius: 3px;
+        padding: 10px;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .itemImage {
+        grid-area: image;
+        max-height: 90px;
+        
+        img {
+            max-height: inherit;
+        }
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    .price {
+        grid-area: price;
+    }
+
+    .btnGroup {
+        grid-area: buttons;
+
+        button {
+            font-size: 20px;
+            font-weight: 700;
+            border: 0px;
+        }
+
+        .closeBtn {
+            grid-area: close;
+            background-color: transparent;
+            color: rgb(136, 14, 14);
+        }
+    }
+    
+    .total {
+        grid-area: total;
+        font-weight: 700;
+    }
+}

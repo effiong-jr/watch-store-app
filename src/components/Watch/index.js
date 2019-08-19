@@ -14,13 +14,13 @@ class FullWatchDetails extends React.Component {
         window.scrollTo(0, 0);
     }
 
-    addToCart = (id) => {
+    addToCart = (id, total) => {
         const runCheck = this.props.cartItems.filter( item => item.id === id );
             if(runCheck.length > 0) {
                 alert("Item already in Cart!");
                 return;
             } else {
-                this.props.addToCart(id);
+                this.props.addToCart(id, total);
                 this.setState({buttonValue: "Added to Cart"});
             }
     }
@@ -43,7 +43,7 @@ class FullWatchDetails extends React.Component {
                             <section>
                                 <h5>{getWatch.name}</h5>
                                 <div>$ {getWatch.price.toFixed(2)}</div>
-                                <Button onClick={(id)=>this.addToCart(getWatch.id)}>{buttonValue}</Button>
+                                <Button onClick={(id, price)=>this.addToCart(getWatch.id, getWatch.price)}>{buttonValue}</Button>
                             </section>
                         </div>
                     </div>
@@ -76,13 +76,13 @@ class FullWatchDetails extends React.Component {
 const mapStateToProps = (state) => {
     return {
         watchDetails: state.watch,
-        cartItems : state.cart,
+        cartItems : state.cart.items,
     }
 }
 
 const mapDispatchtoProps = (dispatch) => {
     return {
-        addToCart: (id) => dispatch(addToCart(id))
+        addToCart: (id, price) => dispatch(addToCart(id, price))
     }
 }
 
