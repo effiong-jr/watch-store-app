@@ -43,10 +43,29 @@ class Cart extends React.Component {
         })
 
         return(
-            <div className="cartContainer">
-                <h2>Your Cart</h2>
-                <div className="cartItems row">{cartItems}</div>
-                <div><strong>Total: ${ this.props.totalAmount.toFixed(2) }</strong></div>
+            <div className="cartContainer row">
+                <div className="cartSection col-12 col-md-6 offset-md-2">
+                    <h4>Your Cart</h4>
+                    <div className="cartItems row">{cartItems}</div>
+                    <div className="orderTotal">
+                        <strong>Order Total: ${ this.props.totalAmount.toFixed(2) }</strong>
+                    </div>
+                </div>
+                <div className="summarySection col-12 col-md-3">
+                    <h5 className="text-center">Summary</h5>
+                    <hr />
+                    <div>
+                        <p>{this.props.cartItems.length} {this.props.cartItems.length > 1? "items" : "item"}</p>
+                        <p>Shipping: Free</p>
+                        <p>VAT: 2%</p>
+                    </div>
+                    <hr />
+                    <div>
+                        <p id="grandTotal">Grand Total: ${ ( this.props.totalAmount + (this.props.totalAmount / 100) * 2).toFixed(2)}</p>
+                    </div>
+                    <hr />
+                    <Button variant="secondary" block>Checkout</Button>
+                </div>
             </div>
         )
     }
@@ -54,7 +73,7 @@ class Cart extends React.Component {
 
 
 const Item = (props) => (
-    <div key={props.id} className="cartItem col-md-6 offset-md-2 col-12 ">
+    <div key={props.id} className="cartItem">
         <div className="itemImage">
             <Image src={props.url} fluid/>
         </div>

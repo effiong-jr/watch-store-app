@@ -67,5 +67,68 @@ export const watches = [
                     adjustment, all add up to a more comfortable fit. You can make fine adjustments to the band size.`,
 
        specification: ["Mineral Glass", "Shock Resistant", "200-meter water resistance", "Case / bezel material: Resin", "Resin Band"],
+   },
+   {
+       id: 3,
+       name: "GBA800-8A",
+       url: "https://casiocdn.com/casio-v2/resource/images/products/watches/small/GBA800-8A_small.png",
+       price: 120.00,
+       description: `G-SHOCK announces the new GBA800 urban sports themed models for athleisure wear. 
+                    The watch itself and its Bluetooth® communication capabilities are designed and 
+                    engineered to make sports activities even more fun. Linking with the G-SHOCK Connected 
+                    phone app provides access to a number of functions to support your workouts. 
+                    Daily health and fitness support functions include a 3-axis accelerometer that keeps 
+                    track of your step count, a Countdown-Timer that lets you create up to 20 timer 
+                    combinations of five timers each, memory for up to 200 lap records and more. 
+                    While linked with the G-SHOCK Connected phone app, you can configure settings for a 
+                    step count log with five exercise intensity levels, calorie calculations, and step targets. 
+                    The ability to use the app to create timer combinations and send them to the watch, to store 
+                    stopwatch measurement data, to view data and more all combine to help you plan and record your workouts, 
+                    making them more effective and enjoyable. Other features include app-based auto time setting correction and 
+                    other features for more efficient timekeeping, and an Auto Double LED Light to facilitate workouts in areas 
+                    where lighting is dim. The small cases of these models are great for active training. Back wings on the 
+                    inside of the bands where they connect to the case, a new band ring shape that prevents sliding, 
+                    more band holes to allow better tightness adjustment, and a soft urethane band, which maintains 
+                    its suppleness even after long wear all add up to a more comfortable fit. A mid-size design that's 
+                    optimal for running and training, Bluetooth®, phone app linking and much more makes the GBA800 the 
+                    perfect choice for everyday wear and fitness training.`,
+
+       specification: ["Shock resistant", "200m water resistant", "Double LED light", "LED light for the face (Auto LED light, Super illuminator, selectable illumination duration (1.5 seconds or 3 seconds), afterglow)"],
+   },
+   {
+       id: 4,
+       name: "DW5600NE-1",
+       url: "https://casiocdn.com/casio-v2/resource/images/products/watches/small/DW5600NE-1_small.png",
+       price: 150.00,
+       description: `G-SHOCK has teamed up with renowned international sports and lifestyle brand, 
+                    New Era Cap Co. Inc., unveiling an all-new, limited edition DW560 men's timepiece. 
+                    The new model, which is inspired by New Era's signature cap - the 59FIFTY® Fitted, 
+                    boasts an understated yet impactful color scheme in classic shades of black and gold.`,
+
+       specification: ["Shock resistant", "200m water resistant", "EL Backlight", ],
+   },
+   {
+       id: 5,
+       name: "MTGB1000-1A",
+       url: "https://casiocdn.com/casio-v2/resource/images/products/watches/small/MTGB1000-1A_small.png",
+       price: 800.00,
+       description: `These new MTG-B1000 models incorporate a new shock-resistant structure, a smaller case size, 
+                    and improved fit to the wrist to create a selection of new additions to the MT-G lineup of 
+                    TRIPLE G RESIST metal-and-resin combination models. The new shock resistant structure of these 
+                    models is the result of the G-SHOCK MT-G constant pursuit of improved strength and durability. 
+                    A New Core Guard structure integrates the lugs and pipes that connect the band into single pieces, 
+                    creating a wall that isolates the watch's module from impact. The resin of the center case is also reinforced 
+                    with carbon fibers, which further enhances module protection, while reducing overall weight. 
+                    These watches come with a new Connected Engine module for improved timekeeping accuracy. 
+                    A Bluetooth® communication function makes it possible to connect with a smartphone running the 
+                    G-SHOCK Connected* app and obtain accurate time information from an on-line time server. 
+                    MULTIBAND 6 automatically adjusts time settings based on reception of one of six time calibration signals 
+                    around the globe, for automatic time adjustment when you are within the range of a signal, even if connection 
+                    with a smartphone is not possible for some reason. All of this means that timekeeping is accurate, no matter 
+                    where in the world you happen to be. Other features include high-brightness LED illumination, World Time, 
+                    stopwatch, and more. Stable operation is ensured by a CASIO original Tough Solar charging system.`,
+
+       specification: ["Shock resistant", "200m water resistant", "Radio Wave Reception: Automatic reception up to six times a day", "Bluetooth® low energy",
+                        "Tough Solar power system (solar-charging system)", "About 18 months with the power-saving function ON after full charge. Power-saving after a certain period in a dark location" ],
    }
 ]

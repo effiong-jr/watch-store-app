@@ -21,10 +21,10 @@ const LineUp = (props) => {
     });
 
     return (
-        <div>
+        <div className="lineupContainer">
             <h2>Line Up</h2>
             <br />
-            <div className="lineupContainer">{showAll}</div>
+            <div className="lineup">{showAll}</div>
         </div>
     )
 }
@@ -47,7 +47,7 @@ const DisplayWatch = (props) => {
                     <h5 className="watchName">{props.name}</h5>
                     <div className="watchPrice">$ {props.price.toFixed(2)}</div>
                     <div className="watchTitle">{props.title}</div>
-                    <div className="briefDescription">{firstSentence(props.description)}.</div>            
+                    <p className="briefDescription">{firstSentence(props.description)}.</p>             
                 </div>
             </Link>
         </div>
