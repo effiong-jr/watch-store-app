@@ -2,5 +2,5 @@
 
 .App {
     font-family: 'Roboto', sans-serif;
-    /* background-color: lightgray; */
+    min-height: 100vh;
 }

@@ -17,8 +17,8 @@ const Header = (props) => {
                     <Nav className="ml-auto linksContainer">
                         <Link to="/" className="nav-link" ><FontAwesomeIcon icon={faHome} /> Home</Link> 
                         <Link to="/your-cart/" className="nav-link"><FontAwesomeIcon icon={faShoppingCart} /> Cart <span id="cartItemCount">[ {props.cartItemCount} ]</span></Link>
-                        <Nav.Link href="/login/"><FontAwesomeIcon icon={faSignInAlt} /> Login</Nav.Link>
-                        <Nav.Link href="/sign-up/"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Nav.Link>
+                        <Link to="/user/login/" className="nav-link"><FontAwesomeIcon icon={faSignInAlt} /> Login</Link>
+                        <Link to="/user/signup/" className="nav-link"><FontAwesomeIcon icon={faUserPlus} /> Sign Up</Link>
                     </Nav>
                 </Navbar.Collapse>
 
