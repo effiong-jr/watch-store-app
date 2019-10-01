@@ -48,7 +48,7 @@ class Cart extends React.Component {
                     <h4>Your Cart</h4>
                     <div className="cartItems row">{cartItems}</div>
                     <div className="orderTotal">
-                        <strong>Order Total: ${ this.props.totalAmount.toFixed(2) }</strong>
+                        <strong>Order Total: &#8358;{ this.props.totalAmount.toLocaleString(undefined, {minimumFractionDigits: 2}) }</strong>
                     </div>
                 </div>
                 <div className="summarySection col-12 col-md-3">
@@ -61,7 +61,7 @@ class Cart extends React.Component {
                     </div>
                     <hr />
                     <div>
-                        <p id="grandTotal">Grand Total: ${ ( this.props.totalAmount + (this.props.totalAmount / 100) * 2).toFixed(2)}</p>
+                        <p id="grandTotal">Grand Total: &#8358;{ ( this.props.totalAmount + (this.props.totalAmount / 100) * 2).toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
                     </div>
                     <hr />
                     <Button variant="secondary" block>Checkout</Button>
@@ -90,7 +90,7 @@ const Item = (props) => (
             
         </div>
         <div className="price">
-            <span>$ { (props.price).toFixed(2) }</span>
+            <span> &#8358;{ (props.price).toLocaleString(undefined, {minimumFractionDigits: 2}) }</span>
         </div>
         <div className="closeBtn">
             <Button variant="link" className="deleteBtn" onClick={(id)=>props.deleteItem(props.id)}>

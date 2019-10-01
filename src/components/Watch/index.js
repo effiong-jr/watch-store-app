@@ -42,7 +42,7 @@ class FullWatchDetails extends React.Component {
                         <div className="col-sm-4">
                             <section>
                                 <h5>{getWatch.name}</h5>
-                                <div>$ {getWatch.price.toFixed(2)}</div>
+                                <div>&#8358;{getWatch.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</div>
                                 <Button onClick={(id, price)=>this.addToCart(getWatch.id, getWatch.price)}>{buttonValue}</Button>
                             </section>
                         </div>

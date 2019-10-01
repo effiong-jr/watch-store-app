@@ -45,7 +45,7 @@ const DisplayWatch = (props) => {
                 <hr />
                 <div className="descriptionContainer">
                     <h5 className="watchName">{props.name}</h5>
-                    <div className="watchPrice">$ {props.price.toFixed(2)}</div>
+                    <div className="watchPrice"><strong>&#8358;{props.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</strong></div>
                     <div className="watchTitle">{props.title}</div>
                     <p className="briefDescription">{firstSentence(props.description)}.</p>             
                 </div>

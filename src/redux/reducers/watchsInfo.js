@@ -6,7 +6,7 @@ export const watches = [
    {
        id: 0,
        name: "GBA800EL-4A",
-       price: 120.00,
+       price: 17520.00,
        url: gba800el,
        title: "LIMITED EDITION",
        description: `The new GBA800EL-4A arrives in a matte red reminiscent of boxing gloves, 
@@ -30,7 +30,7 @@ export const watches = [
        id: 1,
        name: "GMWB5000D-1",
        url : gmwb5000d,
-       price: 500.00,
+       price: 29500.00,
        title: "",
        description: `The Full Metal 5000 is a brand new, specially crafted all-metal timepiece. Inspired by the first G-SHOCK model, DW5000C, this upgraded original 
            boasts a modern, lustrous, colorway while maintaining a vintage aesthetic. The watch also incorporates one of the first and most iconic G-SHOCK 
@@ -50,7 +50,7 @@ export const watches = [
        id: 2,
        name: "GBD800UC-3",
        url: gbd800uc,
-       price: 99.00,
+       price: 36248.00,
        description: `These are the latest additions to the new POWER TRAINER sports lineup from G-SHOCK. 
                     The good-looking designs and utility colors of these models maximize coordination 
                     possibilities with both everyday fashions and training wear. Function-wise, 
@@ -72,7 +72,7 @@ export const watches = [
        id: 3,
        name: "GBA800-8A",
        url: "https://casiocdn.com/casio-v2/resource/images/products/watches/small/GBA800-8A_small.png",
-       price: 120.00,
+       price: 49577.00,
        description: `G-SHOCK announces the new GBA800 urban sports themed models for athleisure wear. 
                     The watch itself and its Bluetooth® communication capabilities are designed and 
                     engineered to make sports activities even more fun. Linking with the G-SHOCK Connected 
@@ -99,7 +99,7 @@ export const watches = [
        id: 4,
        name: "DW5600NE-1",
        url: "https://casiocdn.com/casio-v2/resource/images/products/watches/small/DW5600NE-1_small.png",
-       price: 150.00,
+       price: 31500.00,
        description: `G-SHOCK has teamed up with renowned international sports and lifestyle brand, 
                     New Era Cap Co. Inc., unveiling an all-new, limited edition DW560 men's timepiece. 
                     The new model, which is inspired by New Era's signature cap - the 59FIFTY® Fitted, 
@@ -111,7 +111,7 @@ export const watches = [
        id: 5,
        name: "MTGB1000-1A",
        url: "https://casiocdn.com/casio-v2/resource/images/products/watches/small/MTGB1000-1A_small.png",
-       price: 800.00,
+       price: 98600.00,
        description: `These new MTG-B1000 models incorporate a new shock-resistant structure, a smaller case size, 
                     and improved fit to the wrist to create a selection of new additions to the MT-G lineup of 
                     TRIPLE G RESIST metal-and-resin combination models. The new shock resistant structure of these 
