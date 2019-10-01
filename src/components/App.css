@@ -2,5 +2,12 @@
 
 .App {
     font-family: 'Roboto', sans-serif;
+    position: relative;
     min-height: 100vh;
+    border: 0.2px solid white;;
+}
+
+#mainContainer {
+    position: relative;
+    margin-bottom: 100px;
 }
